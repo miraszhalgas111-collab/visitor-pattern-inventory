@@ -14,5 +14,9 @@ public class Main {
         TotalWeightVisitor weightVisitor = new TotalWeightVisitor();
         inventory.accept(weightVisitor);
         System.out.println("Total weight: " + weightVisitor.getTotalKg() + " kg");
+
+        DescriptionVisitor descriptionVisitor = new DescriptionVisitor();
+        inventory.accept(descriptionVisitor);
+        System.out.print(descriptionVisitor.getReport());
     }
 }
